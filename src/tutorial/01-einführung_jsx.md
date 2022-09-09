@@ -1,22 +1,22 @@
     ```javascript
     const element = <h1>Hallo Welt</h1>
+    ```
 
 Diese Syntax ist weder ein String noch HTML, es nennt sich jsx.
 Es ist eine Erweiterung von JavaScript, die in React für die UI benutzt wird.
 Es ist kein Muss für React, aber sehr verbreitet und hilfreich.
 
-***
+========================================================================================================================
 
 ### Ausdrücke in JSX einbetten:
 
-    ```javascript
-    > const name = 'Foo Bar';
-    > const element = <h1>Hallo, {name}</h1>
+     const name = 'Foo Bar';
+     const element = <h1>Hallo, {name}</h1>
 
 In den geschweiften Klammern {} steht ein JS Ausdruck.
 Das kann auch {2+2} sein, oder {getUser(name)}
 
-***
+========================================================================================================================
 
 ### JSX ist auch ein Ausdruck:
 
@@ -32,7 +32,7 @@ Das kann auch {2+2} sein, oder {getUser(name)}
 JSX kann verwendet werden innerhalb von Schleifen, Bedingungen, Variablen oder Argumenten.
 Sie können als Ergebnis einer Funktion zurückgegeben werden.
 
-***
+========================================================================================================================
 
 ### Angabe von Attributen mit JSX
 
@@ -49,7 +49,7 @@ In einem Attribut sollten nicht beide Varianten gemischt verwendet werden.
 React benutzt die camelCase Schreibweise für Eigenschaften, anstelle von HTML Attributnamen.
 Zum Beispiel aus "class" wird "className" oder aus "tabindex" wird "tabIndex"
 
-***
+========================================================================================================================
 
 ### Tags schließen
 
@@ -59,7 +59,7 @@ Zum Beispiel aus "class" wird "className" oder aus "tabindex" wird "tabIndex"
 Ist zwischen dem Tag nichts, kann es sofort mit /> geschlossen werden.
 Es ist auch möglich Tags zu verschachteln, also das die Kinderknoten haben.
 
-***
+========================================================================================================================
 
 ### JSX sind Objekte
 
@@ -82,6 +82,7 @@ Daraus wird dieses "React-Element" erstellt:
     >     children: 'Hello, world!'
     >   }
     > };
+
 
 
 
