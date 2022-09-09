@@ -1,87 +1,80 @@
-    ```javascript
+
     const element = <h1>Hallo Welt</h1>
-    ```
 
 Diese Syntax ist weder ein String noch HTML, es nennt sich jsx.
 Es ist eine Erweiterung von JavaScript, die in React für die UI benutzt wird.
 Es ist kein Muss für React, aber sehr verbreitet und hilfreich.
 
-========================================================================================================================
+============================================================================================
 
 ### Ausdrücke in JSX einbetten:
 
-     const name = 'Foo Bar';
-     const element = <h1>Hallo, {name}</h1>
+    const name = 'Foo Bar';
+    const element = <h1>Hallo, {name}</h1>
 
 In den geschweiften Klammern {} steht ein JS Ausdruck.
 Das kann auch {2+2} sein, oder {getUser(name)}
 
-========================================================================================================================
+============================================================================================
 
 ### JSX ist auch ein Ausdruck:
 
-    ```javascript
-    > getGreeting(name){
-    >     if(user){
-    >         return <h1>Hallo, {getUser(name)}</h1>;
-    >     } else {
-    >         return <h1>Hallo, Fremder</h1>;
-    >     }
-    > }
+    getGreeting(name){
+        if(user){
+            return <h1>Hallo, {getUser(name)}</h1>;
+        } else {
+            return <h1>Hallo, Fremder</h1>;
+        }
+    }
 
 JSX kann verwendet werden innerhalb von Schleifen, Bedingungen, Variablen oder Argumenten.
 Sie können als Ergebnis einer Funktion zurückgegeben werden.
 
-========================================================================================================================
+============================================================================================
 
 ### Angabe von Attributen mit JSX
 
-    ```javascript
-    > const element = <a href="https://www.reactjs.org"> link </a>;
+    const element = <a href="https://www.reactjs.org"> link </a>;
 
 Eine Variante sind Anführungszeichen um Strings als Attribute anzugeben.
 Eine andere Variante sind die geschweiften Klammern.
 
-    ```javascript
-    > const element = <img src={user.avatarUrl}></img>;
+    const element = <img src={user.avatarUrl}></img>;
 
 In einem Attribut sollten nicht beide Varianten gemischt verwendet werden.
 React benutzt die camelCase Schreibweise für Eigenschaften, anstelle von HTML Attributnamen.
 Zum Beispiel aus "class" wird "className" oder aus "tabindex" wird "tabIndex"
 
-========================================================================================================================
+============================================================================================
 
 ### Tags schließen
 
-    ```javascript
-    > const element = <img src={user.avatarUrl} />;
+    const element = <img src={user.avatarUrl} />;
 
 Ist zwischen dem Tag nichts, kann es sofort mit /> geschlossen werden.
 Es ist auch möglich Tags zu verschachteln, also das die Kinderknoten haben.
 
-========================================================================================================================
+============================================================================================
 
 ### JSX sind Objekte
 
 Bis auf React.createElement() werden alle JSX in Objekten kompiliert.
 
-    ```javascript
-    > const element = (
-    >   <h1 className="greeting">
-    >    Hello, world!
-    >  </h1>
-    > );                                    
+    const element = (
+      <h1 className="greeting">
+       Hello, world!
+     </h1>
+    );                                    
 
 Daraus wird dieses "React-Element" erstellt:
 
-    ```javascript
-    > const element = {
-    >   type: 'h1',
-    >   props: {
-    >     className: 'greeting',
-    >     children: 'Hello, world!'
-    >   }
-    > };
+    const element = {
+      type: 'h1',
+      props: {
+        className: 'greeting',
+        children: 'Hello, world!'
+      }
+    };
 
 
 
