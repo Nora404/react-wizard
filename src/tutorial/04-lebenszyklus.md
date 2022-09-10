@@ -71,8 +71,8 @@ constructor(props) {
 }
 ```
 Der Constructor braucht den Parameter "probs" welcher mit _super(probs)_ weiter gereicht wird.  
-Und es wird die Eigenschaft "state" initialisiert, welche immer ein Objekt hält.
-Auch wenn _root.render()_ die Clock-Komponente läd, wird sie sich noch nicht aktualisieren.  
+Und es wird die Eigenschaft "state" initialisiert, welche immer ein Objekt hält.  
+Auch wenn _root.render()_ die Clock-Komponente nun laden kann, wird sie sich noch nicht aktualisieren.  
 
 ```typescript jsx
 class Clock extends React.Component {
@@ -98,7 +98,7 @@ root.render(<Clock />);
 
 ### Lebenszyklus Methoden
 
-Eine Komponente wird geladen und sie wird wieder gelöscht. Dabei muss ausgeräumt werden.  
+Eine Komponente wird geladen, sie lebt, und wird wieder gelöscht. Dabei muss aufgeräumt werden.  
 Der Timer soll eingerichtet werden, wenn die Komponente geladen wird.  
 Wenn die Komponente gelöscht wird, soll auch der Timer gelöscht werden. Dafür gibt es Methoden.
 
@@ -135,7 +135,7 @@ componentWillUnmount() {
 ### this.setState()
 
 Mit der vom React mitgebrachten Funktion _this.setState()_ wird die Eigenschaft "state" verändert.  
-Diese Eigenschaft soll nicht direkt verändert werden, nur über diese Funktion.
+Diese Eigenschaft soll nicht direkt verändert werden, nur über diese Funktion.  
 Das Intervall ruft jede Sekunde den Callback _this.tick()_ auf. Sie soll den "state" aktualisieren.
 
 ```typescript jsx
