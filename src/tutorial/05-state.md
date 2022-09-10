@@ -43,21 +43,21 @@ Mit Aufruf von _setState()_ wird der Wert von "state" nicht überschrieben, sond
 Hat ein "state" mehrere Variablen, können diese unabhängig voneinander verändert oder hinzugefügt werden.
 
 ```typescript jsx
-constructor(props) {
-  super(props);
-  this.state = {
-    first: "",
-    second: ""
-  };  
-}
+  constructor(props) {
+    super(props);
+    this.state = {
+      first: "",
+      second: ""
+    };  
+  }
 ```
 ```typescript jsx
-setFirst(value) {
-  this.setState({first: value});
-}
-setSecond(value) {
-  this.setState({second: value});
-}
+  setFirst(value) {
+    this.setState({first: value});
+  }
+  setSecond(value) {
+    this.setState({second: value});
+  }
 ```
 
 ============================================================================================
